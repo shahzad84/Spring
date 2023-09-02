@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:context="http://www.springframework.org/context"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ 
+<bean name="emp1" class="com.shahzad.Emp">
+	<property name="name" value="hii"/>
+	
+	<property name="phones">
+		<list><value>3332</value>
+				<value>333</value>
+		</list>
+	</property>
+	<property name="address">
+		
+		<set><value>delhii</value>
+		<value>kanpur</value>
+		</set>
+	</property>
+	<property name="courses">
+		<map><entry key="java" value="2mon"/>
+		<entry key="c" value="1mon"/></map>
+	</property>
+</bean>
+</beans>
