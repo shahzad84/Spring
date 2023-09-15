@@ -8,9 +8,15 @@ public class test {
 
 	public static void main(String[] args) {
 		 AbstractApplicationContext context=new ClassPathXmlApplicationContext("com/xmllifecycle/config.xml");
-		 samosa s1=(samosa) context.getBean("s1");
-         System.out.println(s1);
+//		 1 way using xml
+//		 samosa s1=(samosa) context.getBean("s1");
+//       System.out.println(s1);
          context.registerShutdownHook();
+         
+//         2 way using interface
+         pepsi s1=(pepsi) context.getBean("s1");
+         System.out.println(s1);
+         
 	}
 
 }
